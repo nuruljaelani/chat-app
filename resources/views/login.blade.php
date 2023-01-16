@@ -8,7 +8,7 @@
 </head>
 
 <body class="bg-slate-900">
-    <div class="flex items-center justify-center min-h-screen flex-col">
+    <div class="flex items-center justify-center min-h-screen flex-col gap-4">
         @if ($errors->any())
             <div class="text-red-500 font-medium text-sm">
                 <ul>
@@ -18,9 +18,10 @@
                 </ul>
             </div>
         @endif
+        <p class="text-white font-semibold text-lg md:text-xl lg:text-2xl">Realtime Chat App</p>
         <div
-            class="bg-slate-900 rounded-lg flex flex-col max-w-md w-full p-4 gap-4 md:gap-6 lg:gap-8 shadow shadow-gray-700">
-            <p class="text-xl lg:text-2xl text-white font-semibold">Login</p>
+            class="bg-slate-900 rounded-lg flex flex-col max-w-md w-full p-4 gap-4 md:gap-6 lg:gap-8 shadow-lg shadow-black drop-shadow">
+            <p class="text-lg lg:text-xl text-white font-semibold">Login</p>
             <form class="flex flex-col gap-4" action="{{ route('auth') }}" method="POST">
                 @csrf
                 <div class="flex flex-col">
